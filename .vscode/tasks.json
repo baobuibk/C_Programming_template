@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build active file",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-std=c17",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Biên dịch file đang mở"
+        },
+        {
+            "type": "shell",
+            "label": "build all .c files",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-std=c17",
+                "${workspaceFolder}/*.c",
+                "-o",
+                "${workspaceFolder}/program"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+            "detail": "Biên dịch toàn bộ file .c trong thư mục gốc"
+        }
+    ],
+    "type": "shell",
+    "label": "make",
+    "command": "make",
+    "options": { "cwd": "${workspaceFolder}" },
+    "problemMatcher": ["$gcc"],
+    "group": { "kind": "build", "isDefault": true }
+}
