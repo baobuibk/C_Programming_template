@@ -1,4 +1,4 @@
-# Setup VS Code cho lập trình C trên Windows
+# Setup VS Code cho lập trình C
 
 Hướng dẫn đầy đủ từ máy trắng đến debug được chương trình C. Làm tuần tự từ trên xuống, mỗi bước đều có cách kiểm tra kết quả trước khi sang bước tiếp theo.
 
